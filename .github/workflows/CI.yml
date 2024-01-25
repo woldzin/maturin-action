@@ -1,0 +1,7 @@
+- name: Setup QEMU
+  uses: docker/setup-qemu-action@v1
+- uses: PyO3/maturin-action@v1
+  with:
+    command: build
+    args: --release
+    manylinux: 2_24
